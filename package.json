@@ -1,9 +1,10 @@
 {
 	"name": "move-repositories",
-	"displayName": "Move Repositories",
-	"description": "CD into the workspace folder in terminal when the workspace is changed",
-	"version": "0.0.1",
+	"displayName": "CD Terminal Into Active Workspace Root",
+	"description": "CD into the workspace root folder in terminal when the workspace root is changed",
+	"version": "0.0.2",
 	"publisher": "tgrcode",
+	"repository": "https://github.com/TheGreatRambler/MoveToRepository-Vscode",
 	"engines": {
 		"vscode": "^1.36.1"
 	},
