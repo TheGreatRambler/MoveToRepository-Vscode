@@ -1,0 +1,41 @@
+{
+	"name": "move-repositories",
+	"displayName": "Move Repositories",
+	"description": "CD into the workspace folder in terminal when the workspace is changed",
+	"version": "0.0.1",
+	"publisher": "tgrcode",
+	"engines": {
+		"vscode": "^1.36.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./src/main.js",
+	"contributes": {
+		"configuration": {
+			"title": "Change Terminal on Workspace Settings",
+			"properties": {
+				"changeTerminalOnWorkspace.changeOnFile": {
+					"type": "boolean",
+					"description": "Wether to change the folder to the current file directory as well",
+					"default": false
+				},
+				"changeTerminalOnWorkspace.terminalToUse": {
+					"type": "string",
+					"description": "Specify what terminal to use",
+					"default": "Active",
+					"enum": ["Active", "First"],
+					"enumDescriptions": ["Only change the directory in the current terminal", "Only change the directory in the first terminal"]
+				},
+				"changeTerminalOnWorkspace.changeTerminalOnMove": {
+					"type": "boolean",
+					"description": "Change directory of any terminal to the active folder when moving into it (Only has effect when multiple terminals are opened)",
+					"default": false
+				}
+			}
+		}
+	}
+}
